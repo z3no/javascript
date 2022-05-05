@@ -16,25 +16,25 @@ const btnGreen = document.getElementById('green');
 const btnYellow = document.getElementById('yellow');
 const btnBlue = document.getElementById('blue');
 
-btnRed.addEventListener('click', function onClick(event) {
+btnRed.addEventListener('click', function onClick() {
 
     document.body.style.backgroundColor = 'red';
 
 });
 
-btnGreen.addEventListener('click', function onClick(event) {
+btnGreen.addEventListener('click', function onClick() {
 
     document.body.style.backgroundColor = 'green';
 
 });
 
-btnYellow.addEventListener('click', function onClick(event) {
+btnYellow.addEventListener('click', function onClick() {
 
     document.body.style.backgroundColor = 'yellow';
 
 });
 
-btnBlue.addEventListener('click', function onClick(event) {
+btnBlue.addEventListener('click', function onClick() {
 
     document.body.style.backgroundColor = 'blue';
 
