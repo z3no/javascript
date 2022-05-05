@@ -13,7 +13,7 @@
     let colorInput = document.getElementById('color');
     let btn = document.getElementById('run');
 
-    btn.addEventListener('click',  function onClick(event) {
+    btn.addEventListener('click',  function onClick() {
 
         document.body.style.backgroundColor = colorInput.value;
 
