@@ -9,8 +9,33 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+// For each button, when clicked change the background color of the page to the one indicated.
 
-    // your code here
+const btnRed = document.getElementById('red');
+const btnGreen = document.getElementById('green');
+const btnYellow = document.getElementById('yellow');
+const btnBlue = document.getElementById('blue');
 
-})();
+btnRed.addEventListener('click', function onClick(event) {
+
+    document.body.style.backgroundColor = 'red';
+
+});
+
+btnGreen.addEventListener('click', function onClick(event) {
+
+    document.body.style.backgroundColor = 'green';
+
+});
+
+btnYellow.addEventListener('click', function onClick(event) {
+
+    document.body.style.backgroundColor = 'yellow';
+
+});
+
+btnBlue.addEventListener('click', function onClick(event) {
+
+    document.body.style.backgroundColor = 'blue';
+
+});
