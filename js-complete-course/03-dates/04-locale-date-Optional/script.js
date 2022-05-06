@@ -13,6 +13,13 @@
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    // your code here
+    //At MDN Javascript > Standard built-in objects > Date from .toDateString() you can find a lot of information.
+
+    const date = new Date();
+    let dateOfTheDay = date.toDateString();
+    let hourOfTheDay = date.toLocaleTimeString();
+    let today = `${dateOfTheDay}, ${hourOfTheDay}`;
+
+    document.getElementById('target').innerHTML = today;
 
 })();
