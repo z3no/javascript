@@ -9,6 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+//  CHALLENGE: When you click the button, display on the console, one after the other, the name of each person in the array people. Use the forEach method.
+/*  INFORMATION:
+        developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+        developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+            - Take a look at the Find an object in an array by one of its properties examples.
+ */
+
 (function() {
 
     var people = [
@@ -40,5 +47,8 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener("click", function (){
+        people.forEach(element => console.log(`${element.firstname} ${element.lastname}`));
+    });
 
 })();
