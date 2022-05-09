@@ -18,24 +18,24 @@
         // perform an addition
         let one = +document.getElementById("op-one").value;
         let two = +document.getElementById("op-two").value;
-        let addition = one + two;
-        console.log(addition);
+        console.log(one + two);
+        alert(one + two);
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
         // perform an substraction
         let one = +document.getElementById("op-one").value;
         let two = +document.getElementById("op-two").value;
-        let subtraction = one - two;
-        console.log(subtraction);
+        console.log(one - two);
+        alert(one - two);
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
         // perform an multiplication
         let one = +document.getElementById("op-one").value;
         let two = +document.getElementById("op-two").value;
-        let multiplication = one * two;
-        console.log(multiplication);
+        console.log(one * two);
+        alert(one * two);
     });
 
     document.getElementById("division").addEventListener("click", function() {
@@ -44,7 +44,7 @@
         // let two = +document.getElementById("op-two").value;
         let one = parseInt(document.getElementById("op-one").value);
         let two = parseInt(document.getElementById("op-two").value);
-        let division = one / two;
-        console.log(division);
+        console.log(one / two);
+        alert(one / two);
     });
 })();
