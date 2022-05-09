@@ -9,6 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+/* CHALLENGE:
+        When you click the button, display in the console the mail adress of the person in the array people whose lastname is "Dupont" and firstname is "Jean".
+        Then display his index in this array.
+ */
+
 (function() {
 
     var people = [
@@ -90,5 +95,9 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener("click", function (){
+        const person = people.find(({lastname, firstname}) => lastname === 'Dupont' && firstname === 'Jean');
+        console.log(`Email: ${person.email}`);
+    });
 
 })();
