@@ -16,7 +16,16 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        const valueNumbers = document.getElementById('numbers').value;
 
+        // MDN info developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+        const arrayNumbers = valueNumbers.split(", ");
+        console.log(arrayNumbers);
+        // MDN info developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+        arrayNumbers.sort((a, b) => a - b);
+        console.log(arrayNumbers);
+        // MDN info developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+        document.getElementById('numbers').value = arrayNumbers.join(', ');
     });
 
 })();
