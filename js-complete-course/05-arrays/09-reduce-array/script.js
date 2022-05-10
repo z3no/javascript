@@ -9,9 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+//  CHALLENGE: When you click the button, display (in the console ) the total of the persons' ages in the array people. Use the reduce method.
+//  INFORMATION:    developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
 (function() {
 
-    var people = [
+    const people = [
         {
             firstname: "Grenville",
             lastname: "Stive",
@@ -90,5 +93,11 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener("click", function (){
+        // 0 + 64 + 73 + 56 + 17 + 87 + 43 + 45 + 88 + 69 + 77 + 82 + 25 + 87 + 80 + 81
+        const initialValue = 0;
+        const sumAge = people.reduce((previousValue, persons) => previousValue + persons.age, initialValue);
+        console.log(sumAge);
+    })
 
 })();
