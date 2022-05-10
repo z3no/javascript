@@ -23,7 +23,7 @@
 
 (function() {
 
-    var people = [
+    let people = [
         {
             firstname: "Bradford",
             lastname: "Coldbath",
