@@ -9,9 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-/* CHALLENGE:
+/*  CHALLENGE:
         When you click the button, display in the console the mail adress of the person in the array people whose lastname is "Dupont" and firstname is "Jean".
         Then display his index in this array.
+ */
+
+/*
+    INFORMATION:
+        developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+                - Find an object in an array by one of its properties
+        developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
  */
 
 (function() {
@@ -98,6 +105,8 @@
     document.getElementById('run').addEventListener("click", function (){
         const person = people.find(({lastname, firstname}) => lastname === 'Dupont' && firstname === 'Jean');
         console.log(`Email: ${person.email}`);
+        //const personIndex = people.indexOf(person);
+        console.log(`Index: ${people.indexOf(person)}`);
     });
 
 })();
