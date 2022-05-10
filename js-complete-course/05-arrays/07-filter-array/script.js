@@ -9,9 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+/*  CHALLENGE:
+    When you click the button, create a new array from the array people, containing only the people whose age is more than 18 years.
+    Display the resulting array in the console.
+ */
+
+//  INFORMATION:    ->      developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
 (function() {
 
-    var people = [
+    let people = [
         {
             firstname: "Dreddy",
             lastname: "Nussgen",
@@ -90,5 +97,10 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener("click", function () {
+        // array.filter() method -> creates a new array with all elements that pass the test implemented by the provided function
+        const plus18 = people.filter(people => people.age > 18);
+        console.log(plus18);
+    });
 
 })();
