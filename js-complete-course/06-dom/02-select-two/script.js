@@ -9,8 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+/*  CHALLENGE:
+ *      Select the element with the id "target" (not using getElementById!) and replace its content with "owned".
+ *
+ *  INFORMATION:
+ *      developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+ */
+
 (function() {
 
     // your code here
+    document.querySelector("#target").innerHTML = "OWNED TWICE!";
 
 })();
