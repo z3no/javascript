@@ -16,7 +16,10 @@
 
 /*  INFORMATION:
         developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-
+        developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+        developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
+        developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+        developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
  */
 
 (function() {
@@ -29,7 +32,21 @@
     }
 
     document.getElementById('run').addEventListener("click", function (){
-        console.log(randomNumbers);
+        //console.log(randomNumbers);
+        randomNumbers.forEach((number, index) => {
+            let tdId = "n-" + (index + 1).toString();
+            //console.log(tdId);
+            let value = number.toString();
+            //console.log(value);
+            document.getElementById(tdId).innerText = value;
+        });
+
+        document.getElementById('min').innerText = Math.min(...randomNumbers);
+        document.getElementById('max').innerText = Math.max(...randomNumbers);
+        // array.reduce() is something we have seen in exercise 09 of this chapter
+        const sumNumbers = randomNumbers.reduce((previousValue, nextValue) => previousValue + nextValue, 0);
+        document.getElementById('sum').innerText = sumNumbers;
+        document.getElementById('average').innerText = sumNumbers / randomNumbers.length
 
     });
 
