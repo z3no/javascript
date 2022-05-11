@@ -14,13 +14,26 @@
  *      As soon as 10 characters have been entered, don't allow any more characters to be typed.
  *
  *  INFORMATION:
- *
+ *      https://www.w3schools.com/jsref/prop_search_maxlength.asp
+ *      https://developer.mozilla.org/en-US/docs/Web/API/Document/keyup_event
+ *      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length
  */
 
 (function() {
 
     // your code here
-    let input = document.getElementById('pass-one');
+    document.getElementById('pass-one').maxLength = "10";
+    const input = document.getElementById('pass-one');
+
+
+    input.addEventListener("keyup", counter);
+
+    function counter() {
+        let inputValue = input.value;
+        let inputLength = inputValue.length;
+
+        document.getElementById('counter').textContent = `${inputLength}/10`
+    }
 
 
 
