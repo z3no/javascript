@@ -19,7 +19,6 @@
     // your code here
     const button = document.getElementById('run');
     const target = document.getElementById('target');
-    const template = document.querySelector('#tpl-hero');
 
     button.addEventListener("click", function (){
         getXMenById();
@@ -28,6 +27,7 @@
 
     async function getXMenById () {
         const heroId = document.getElementById('hero-id').value;
+
         // Storing response
         const response = await fetch (`http://localhost:3000/heroes/${heroId}`);
         // If the call failed, give an error
@@ -37,8 +37,18 @@
         // Storing data in form of JSON
         const data = await response.json();
 
-        // Showing the name of the hero
-        target.innerText = data.name;
+        // Reproduce html structure
+        const li = document.createElement("li");
+        const h4 = document.createElement("h4");
+        const strong = document.createElement("strong");
+        const em = document.createElement("em");
+        const p = document.createElement("p");
+        target.append(li);
+        li.append(h4, p);
+        h4.append(strong, em);
+        strong.innerHTML = `${data.name}`;
+        em.innerHTML = ` aka ${data.alterEgo}`;
+        p.innerHTML = data.abilities;
     }
 
 
