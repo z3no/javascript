@@ -13,6 +13,11 @@
  *  CHALLENGE:
  *      When you click on the button, get the id from the form, then get the corresponding X-Men from the API and display it in the tag whose id is "target".
  *      Use the tag template to reproduce a suitable html structure.
+ *
+ *  INFORMATION:
+ *      https://developer.mozilla.org/en-US/docs/Web/API/Response/ok
+ *      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
+ *      https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
  */
 
 (() => {
@@ -20,11 +25,9 @@
     const button = document.getElementById('run');
     const target = document.getElementById('target');
 
-    button.addEventListener("click", function (){
-        getXMenById();
-    });
-    // Defining async function
+    button.addEventListener("click", getXMenById);
 
+    // Defining async function
     async function getXMenById () {
         const heroId = document.getElementById('hero-id').value;
 
@@ -43,9 +46,11 @@
         const strong = document.createElement("strong");
         const em = document.createElement("em");
         const p = document.createElement("p");
-        target.append(li);
-        li.append(h4, p);
-        h4.append(strong, em);
+        target.appendChild(li);
+        li.appendChild(h4);
+        li.appendChild(p);
+        h4.appendChild(strong);
+        h4.appendChild(em);
         strong.innerHTML = `${data.name}`;
         em.innerHTML = ` aka ${data.alterEgo}`;
         p.innerHTML = data.abilities;
